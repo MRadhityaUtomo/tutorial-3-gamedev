@@ -1,8 +1,8 @@
 extends CharacterBody2D
 
-@export var gravity = 800.0
+@export var gravity = 1200
 @export var walk_speed = 300
-@export var jump_speed = -350
+@export var jump_speed = -400
 @export var dash_speed = 750
 @export var dash_duration = 0.2
 @export var double_tap_time = 0.3  # Time interval to detect double tap
@@ -83,13 +83,13 @@ func _physics_process(delta):
 	else:
 		var move_dir = 0
 		if Input.is_action_just_pressed("ui_left"):
-			if Time.get_ticks_msec() - last_left_tap < double_tap_time * 1000:
+			if Time.get_ticks_msec() - last_left_tap < double_tap_time * 500:
 				start_dash(-1)
 			last_left_tap = Time.get_ticks_msec()
 		
 		
 		if Input.is_action_just_pressed("ui_right"):
-			if Time.get_ticks_msec() - last_right_tap < double_tap_time * 1000:
+			if Time.get_ticks_msec() - last_right_tap < double_tap_time * 500:
 				start_dash(1)
 			last_right_tap = Time.get_ticks_msec()
 	
