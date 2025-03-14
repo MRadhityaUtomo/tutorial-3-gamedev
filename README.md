@@ -15,6 +15,7 @@ I wanted to add an attack action with the sprite already in there but time const
 
 2. Membuat minimal 1 (satu) audio untuk efek suara (SFX) dan memasukkannya ke dalam permainan. Kamu dapat membuatnya sendiri atau mencari dari koleksi aset gratis.
 - Added attack mechanic for player, can knockback boombox if hit, has its own audio when slashing and hitting.
+Using area2d in player, with its own collisionshape2d as the attack"s hitbox. The signal will give force to the rigidbody2d boombox when connected.
 
 3. Membuat minimal 1 (satu) musik latar (background music) dan memasukkannya ke dalam permainan. Kamu dapat membuatnya sendiri atau mencari dari koleksi aset gratis.
 - Added bg music through boombox.
